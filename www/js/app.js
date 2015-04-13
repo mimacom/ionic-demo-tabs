@@ -38,46 +38,46 @@ angular.module('ionicDemoTabs', ['ionic', 'starter.controllers', 'starter.servic
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.css', {
+    url: '/css',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-css': {
+        templateUrl: 'templates/tab-css.html',
+        controller: 'CssCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.js', {
+      url: '/js',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-js': {
+          templateUrl: 'templates/tab-js.html',
+          controller: 'JsComponentsCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
+    /*.state('tab.chat-detail', {
       url: '/chats/:chatId',
       views: {
-        'tab-chats': {
+        'tab-js': {
           templateUrl: 'templates/chat-detail.html',
           controller: 'ChatDetailCtrl'
         }
       }
-    })
+    })*/
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.event', {
+    url: '/event',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-event': {
+        templateUrl: 'templates/tab-event.html',
+        controller: 'EventCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/css');
 
 });
