@@ -4,7 +4,18 @@
                 pulling-text="Pull to refresh..."
                 on-refresh="doRefresh()">
         </ion-refresher>
-        <ion-list show-delete="false" show-reorder="false">
+        <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+
+
+            <div class="button-bar">
+                <button class="button"
+                        ng-click="data.showDelete = !data.showDelete; data.showReorder = false">
+                    Delete
+                </button>
+                <button class="button" ng-click="data.showDelete = false; data.showReorder = !data.showReorder">
+                    Reorder
+                </button>
+            </div>
 
             <ion-item collection-repeat="item in items"
                       item="item"
