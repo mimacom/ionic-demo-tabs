@@ -112,6 +112,16 @@ angular.module('ionicDemoTabs', ['ionic', 'ionicDemoTabs.controllers', 'ionicDem
                 }
             })
 
+            .state('tab.spinners', {
+                url: '/spinners',
+                views: {
+                    'tab-js': {
+                        templateUrl: 'templates/js-samples/spinners.html',
+                        controller: 'JsComponentsCtrl'
+                    }
+                }
+            })
+
             .state('tab.event', {
                 url: '/event',
                 views: {
