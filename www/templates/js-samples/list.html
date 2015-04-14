@@ -1,6 +1,10 @@
 <ion-view view-title="Complex List">
     <ion-content>
-        <ion-list show-delete="true" show-reorder="true">
+        <ion-refresher
+                pulling-text="Pull to refresh..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <ion-list show-delete="false" show-reorder="false">
 
             <ion-item collection-repeat="item in items"
                       item="item"

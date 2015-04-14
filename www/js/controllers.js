@@ -124,7 +124,7 @@ angular.module('ionicDemoTabs.controllers', [])
         });
 
     })
-    .controller('ListCtrl', function ($scope) {
+    .controller('ListCtrl', function ($scope, $timeout) {
         $scope.data = {
             showDelete: false
         };
@@ -143,6 +143,15 @@ angular.module('ionicDemoTabs.controllers', [])
 
         $scope.onItemDelete = function(item) {
             $scope.items.splice($scope.items.indexOf(item), 1);
+        };
+
+        $scope.doRefresh = function() {
+            var item = {id: new Date().getMilliseconds()};
+            $scope.items.push(item);
+            $timeout(function() {
+                // Stop the ion-refresher from spinning
+                $scope.$broadcast('scroll.refreshComplete');
+            }, 1500);
         };
 
         $scope.items = [
