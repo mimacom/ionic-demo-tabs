@@ -122,6 +122,16 @@ angular.module('ionicDemoTabs', ['ionic', 'ngCordova', 'ionicDemoTabs.controller
                 }
             })
 
+            .state('tab.jslist', {
+                url: '/js-list',
+                views: {
+                    'tab-js': {
+                        templateUrl: 'templates/js-samples/list.html',
+                        controller: 'ListCtrl'
+                    }
+                }
+            })
+
             .state('tab.event', {
                 url: '/event',
                 views: {
