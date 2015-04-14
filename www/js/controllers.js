@@ -3,7 +3,7 @@ angular.module('ionicDemoTabs.controllers', [])
     .controller('CssCtrl', function ($scope) {
     })
 
-    .controller('JsComponentsCtrl', function ($scope, $ionicActionSheet, $ionicLoading, $ionicModal, $ionicPopup) {
+    .controller('JsComponentsCtrl', function ($scope, $ionicActionSheet, $ionicLoading, $ionicModal, $ionicPopup, $ionicPopover) {
         $scope.showActionSheet = function () {
             $ionicActionSheet.show({
                 buttons: [
@@ -99,6 +99,18 @@ angular.module('ionicDemoTabs.controllers', [])
             }, 3000);
         };
 
+        $ionicPopover.fromTemplateUrl('templates/js-samples/popover.html', {
+            scope: $scope
+        }).then(function(popover) {
+            $scope.popover = popover;
+        });
+
+        $scope.showPopover = function($event) {
+            $scope.popover.show($event);
+        };
+        $scope.closePopover = function() {
+            $scope.popover.hide();
+        };
 
     })
 
