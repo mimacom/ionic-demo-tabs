@@ -123,6 +123,36 @@ angular.module('ionicDemoTabs.controllers', [])
             }
         });
 
+        $scope.$on('$ionicView.loaded', function() {
+            $scope.isLoaded = true;
+        });
+
+        $scope.$on('$ionicView.enter', function() {
+            $scope.isEnter = true;
+        });
+
+        $scope.$on('$ionicView.leave', function() {
+            $scope.isLeave = true;
+        });
+
+        $scope.$on('$ionicView.beforeEnter', function() {
+            $scope.isBeforeEnter = true;
+        });
+
+        $scope.$on('$ionicView.beforeLeave', function() {
+            $scope.isBeforeLeave = true;
+        });
+
+        $scope.$on('$ionicView.afterEnter', function() {
+            $scope.isAfterEnter = true;
+        });
+
+        $scope.$on('$ionicView.afterLeave', function() {
+            $scope.isAfterLeave = true;
+        });
+
+
+
     })
     .controller('ListCtrl', function ($scope, $timeout) {
         $scope.data = {

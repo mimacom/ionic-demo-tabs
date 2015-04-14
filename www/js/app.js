@@ -150,6 +150,16 @@ angular.module('ionicDemoTabs', ['ionic', 'ngCordova', 'ionicDemoTabs.controller
                         controller: 'EventCtrl'
                     }
                 }
+            })
+
+            .state('tab.eventList', {
+                url: '/event-list',
+                views: {
+                    'tab-event': {
+                        templateUrl: 'templates/plugin-event-samples/events.html',
+                        controller: 'EventCtrl'
+                    }
+                }
             });
 
         // if none of the above states are matched, use this as the fallback

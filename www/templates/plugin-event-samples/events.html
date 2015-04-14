@@ -1,0 +1,46 @@
+<ion-view view-title="Plugins">
+    <ion-content class="padding">
+
+        <div class="card">
+            <div class="item item-divider">
+                Events Fired
+            </div>
+            <div class="item item-text-wrap" ng-if="isLoaded">
+                <div class="row">
+                    Event load fired
+                </div>
+            </div>
+            <div class="item item-text-wrap" ng-if="isBeforeEnter">
+                <div class="row">
+                    Event beforeEnter fired
+                </div>
+            </div>
+            <div class="item item-text-wrap" ng-if="isEnter">
+                <div class="row">
+                    Event enter fired
+                </div>
+            </div>
+            <div class="item item-text-wrap" ng-if="isAfterEnter">
+                <div class="row">
+                    Event afterEnter fired
+                </div>
+            </div>
+            <div class="item item-text-wrap" ng-if="isBeforeLeave">
+                <div class="row">
+                    Event beforeLeave fired
+                </div>
+            </div>
+            <div class="item item-text-wrap" ng-if="isLeave">
+                <div class="row">
+                    Event leave fired
+                </div>
+            </div>
+            <div class="item item-text-wrap" ng-if="isAfterLeave">
+                <div class="row">
+                    Event afterLeave fired
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
