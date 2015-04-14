@@ -3,9 +3,8 @@ angular.module('ionicDemoTabs.controllers', [])
     .controller('CssCtrl', function ($scope) {
     })
 
-    .controller('JsComponentsCtrl', function ($scope, $ionicActionSheet) {
-        $scope.show = function () {
-
+    .controller('JsComponentsCtrl', function ($scope, $ionicActionSheet, $ionicLoading) {
+        $scope.showActionSheet = function () {
             $ionicActionSheet.show({
                 buttons: [
                     {text: '<b>Edit</b>'},
@@ -20,6 +19,13 @@ angular.module('ionicDemoTabs.controllers', [])
                 buttonClicked: function (index) {
                     return true;
                 }
+            });
+        };
+
+        $scope.showLoading = function() {
+            $ionicLoading.show({
+                template: '<ion-spinner></ion-spinner>',
+                duration: 2000
             });
         };
 
