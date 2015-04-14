@@ -102,6 +102,15 @@ angular.module('ionicDemoTabs', ['ionic', 'ionicDemoTabs.controllers', 'ionicDem
                     }
                 }
             })
+            .state('tab.slide', {
+                url: '/slide-box',
+                views: {
+                    'tab-js': {
+                        templateUrl: 'templates/js-samples/slide-box.html',
+                        controller: 'JsComponentsCtrl'
+                    }
+                }
+            })
 
             .state('tab.event', {
                 url: '/event',
