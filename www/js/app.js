@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('ionicDemoTabs', ['ionic', 'ionicDemoTabs.controllers', 'ionicDemoTabs.services'])
+angular.module('ionicDemoTabs', ['ionic', 'ngCordova', 'ionicDemoTabs.controllers', 'ionicDemoTabs.services'])
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
@@ -127,6 +127,16 @@ angular.module('ionicDemoTabs', ['ionic', 'ionicDemoTabs.controllers', 'ionicDem
                 views: {
                     'tab-event': {
                         templateUrl: 'templates/tab-event.html',
+                        controller: 'EventCtrl'
+                    }
+                }
+            })
+
+            .state('tab.plugins', {
+                url: '/event',
+                views: {
+                    'tab-event': {
+                        templateUrl: 'templates/plugin-event-samples/plugins.html',
                         controller: 'EventCtrl'
                     }
                 }

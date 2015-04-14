@@ -114,8 +114,13 @@ angular.module('ionicDemoTabs.controllers', [])
 
     })
 
-    .controller('EventCtrl', function ($scope) {
-        $scope.settings = {
-            enableFriends: true
-        };
+    .controller('EventCtrl', function ($scope, $cordovaDevice, $ionicPlatform) {
+        $ionicPlatform.ready(function () {
+            try{
+                $scope.device = $cordovaDevice.getDevice();
+            } catch (error) {
+                console.error(error);
+            }
+        });
+
     });
