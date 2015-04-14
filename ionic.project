@@ -1,6 +1,6 @@
 {
   "name": "ionic-demo-tabs",
-  "app_id": "",
+  "app_id": "ca1f5eac",
   "gulpStartupTasks": [
     "sass",
     "watch"
