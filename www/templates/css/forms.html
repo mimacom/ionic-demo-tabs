@@ -1,0 +1,51 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="Forms">
+  <ion-content class="padding">
+      <div class="list">
+          <label class="item item-input">
+              <input type="text" placeholder="Placeholder Label">
+          </label>
+          <label class="item item-input">
+              <textarea placeholder="Comment Textarea"></textarea>
+          </label>
+          <label class="item item-input">
+              <span class="input-label">Inline Label</span>
+              <input type="text">
+          </label>
+          <label class="item item-input item-stacked-label">
+              <span class="input-label">Stacked Label</span>
+              <input type="text" placeholder="Text">
+          </label>
+          <label class="item item-input item-floating-label">
+              <span class="input-label">Floating Label</span>
+              <input type="text" placeholder="Floating Label">
+          </label>
+      </div>
+
+      <div class="list">
+          <div class="item item-input-inset">
+              <label class="item-input-wrapper">
+                  <input type="text" placeholder="Email">
+              </label>
+              <button class="button button-small">
+                  Submit
+              </button>
+          </div>
+      </div>
+
+      <div class="list list-inset">
+          <label class="item item-input">
+              <i class="icon ion-search placeholder-icon"></i>
+              <input type="text" placeholder="Search">
+          </label>
+      </div>
+
+
+
+  </ion-content>
+</ion-view>
