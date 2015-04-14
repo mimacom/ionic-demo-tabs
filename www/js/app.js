@@ -66,6 +66,15 @@ angular.module('ionicDemoTabs', ['ionic', 'starter.controllers', 'starter.servic
                 }
             })
 
+            .state('tab.controls', {
+                url: '/controls',
+                views: {
+                    'tab-css': {
+                        templateUrl: 'templates/css/controls.html'
+                    }
+                }
+            })
+
             .state('tab.js', {
                 url: '/js',
                 views: {

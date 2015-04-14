@@ -1,0 +1,85 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<!--suppress HtmlUnknownTag -->
+<ion-view view-title="Controls">
+  <ion-content class="padding">
+      <div class="list">
+          <div class="item item-divider">
+              Toggle List
+          </div>
+          <ion-toggle toggle-class="toggle-assertive">HTML5</ion-toggle>
+          <ion-toggle toggle-class="toggle-positive">CSS3</ion-toggle>
+          <ion-toggle toggle-class="toggle-energized">JavaScript</ion-toggle>
+      </div>
+
+      <div class="list">
+          <div class="item item-divider">
+              Checkbox List
+          </div>
+          <ion-checkbox>AngularJS</ion-checkbox>
+          <ion-checkbox>Angular UI Router</ion-checkbox>
+      </div>
+
+      <div class="list">
+          <div class="item item-divider">
+              Radio Button List
+          </div>
+          <label class="item item-radio">
+              <input type="radio" name="group">
+              <div class="item-content">
+                  GruntJS
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+          </label>
+          <label class="item item-radio">
+              <input type="radio" name="group">
+              <div class="item-content">
+                  GulpJS
+              </div>
+              <i class="radio-icon ion-checkmark"></i>
+          </label>
+      </div>
+
+      <div class="list">
+          <div class="item item-divider">
+              Ranges In A List
+          </div>
+          <div class="item range range-positive">
+              <i class="icon ion-ios7-sunny-outline"></i>
+              <input type="range" name="volume" min="0" max="100" value="33">
+              <i class="icon ion-ios7-sunny"></i>
+          </div>
+          <div class="item range range-calm">
+              <i class="icon ion-ios7-lightbulb-outline"></i>
+              <input type="range" name="volume" min="0" max="100" value="25">
+              <i class="icon ion-ios7-lightbulb"></i>
+          </div>
+          <div class="item range range-balanced">
+              <i class="icon ion-ios7-bolt-outline"></i>
+              <input type="range" name="volume" min="0" max="100" value="38">
+              <i class="icon ion-ios7-bolt"></i>
+          </div>
+      </div>
+
+      <div class="list">
+          <div class="item item-divider">
+              Select
+          </div>
+          <label class="item item-input item-select">
+              <div class="input-label">
+                  JS Framework
+              </div>
+              <select>
+                  <option selected>AngularJS</option>
+                  <option>Backbone</option>
+                  <option>ReactJS</option>
+              </select>
+          </label>
+      </div>
+
+  </ion-content>
+</ion-view>
