@@ -3,7 +3,7 @@ angular.module('ionicDemoTabs.controllers', [])
     .controller('CssCtrl', function ($scope) {
     })
 
-    .controller('JsComponentsCtrl', function ($scope, $ionicActionSheet, $ionicLoading, $ionicModal) {
+    .controller('JsComponentsCtrl', function ($scope, $ionicActionSheet, $ionicLoading, $ionicModal, $ionicPopup) {
         $scope.showActionSheet = function () {
             $ionicActionSheet.show({
                 buttons: [
@@ -17,6 +17,8 @@ angular.module('ionicDemoTabs.controllers', [])
                     // add cancel code..
                 },
                 buttonClicked: function (index) {
+                    console.log(index);
+
                     return true;
                 }
             });
@@ -37,6 +39,64 @@ angular.module('ionicDemoTabs.controllers', [])
         });
         $scope.openModal = function() {
             $scope.modal.show();
+        };
+
+        $scope.showAlert = function() {
+            var alertPopup = $ionicPopup.alert({
+                title: 'Warning',
+                template: 'This action is dangerous!!!'
+            });
+            alertPopup.then(function (res) {
+                console.log(res);
+            });
+        };
+
+        $scope.showConfirm = function() {
+            var confirmPopup = $ionicPopup.confirm({
+                title: 'Please confirm',
+                template: 'Are you sure you want to continue?'
+            });
+            confirmPopup.then(function(res) {
+                if(res) {
+                    console.log('You are sure');
+                } else {
+                    console.log('You are not sure');
+                }
+            });
+        };
+
+        $scope.showPopup = function() {
+            $scope.data = {};
+
+            // An elaborate, custom popup
+            var myPopup = $ionicPopup.show({
+                template: '<input type="password" ng-model="data.wifi">',
+                title: 'Enter Wi-Fi Password',
+                subTitle: 'Please use normal things',
+                scope: $scope,
+                buttons: [
+                    { text: 'Cancel' },
+                    {
+                        text: '<b>Save</b>',
+                        type: 'button-positive',
+                        onTap: function(e) {
+                            if (!$scope.data.wifi) {
+                                //don't allow the user to close unless he enters wifi password
+                                e.preventDefault();
+                            } else {
+                                //noinspection JSUnresolvedVariable
+                                return $scope.data.wifi;
+                            }
+                        }
+                    }
+                ]
+            });
+            myPopup.then(function(res) {
+                console.log('Tapped!', res);
+            });
+            $timeout(function() {
+                myPopup.close(); //close the popup after 3 seconds for some reason
+            }, 3000);
         };
 
 
