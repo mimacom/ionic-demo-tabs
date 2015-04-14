@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('ionicDemoTabs', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('ionicDemoTabs', ['ionic', 'ionicDemoTabs.controllers', 'ionicDemoTabs.services'])
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
@@ -52,7 +52,7 @@ angular.module('ionicDemoTabs', ['ionic', 'starter.controllers', 'starter.servic
                 url: '/buttons',
                 views: {
                     'tab-css': {
-                        templateUrl: 'templates/css/buttons.html'
+                        templateUrl: 'templates/css-samples/buttons.html'
                     }
                 }
             })
@@ -61,7 +61,7 @@ angular.module('ionicDemoTabs', ['ionic', 'starter.controllers', 'starter.servic
                 url: '/forms',
                 views: {
                     'tab-css': {
-                        templateUrl: 'templates/css/forms.html'
+                        templateUrl: 'templates/css-samples/forms.html'
                     }
                 }
             })
@@ -70,7 +70,7 @@ angular.module('ionicDemoTabs', ['ionic', 'starter.controllers', 'starter.servic
                 url: '/controls',
                 views: {
                     'tab-css': {
-                        templateUrl: 'templates/css/controls.html'
+                        templateUrl: 'templates/css-samples/controls.html'
                     }
                 }
             })
@@ -79,7 +79,7 @@ angular.module('ionicDemoTabs', ['ionic', 'starter.controllers', 'starter.servic
                 url: '/lists',
                 views: {
                     'tab-css': {
-                        templateUrl: 'templates/css/lists.html'
+                        templateUrl: 'templates/css-samples/lists.html'
                     }
                 }
             })
@@ -88,7 +88,7 @@ angular.module('ionicDemoTabs', ['ionic', 'starter.controllers', 'starter.servic
                 url: '/cards',
                 views: {
                     'tab-css': {
-                        templateUrl: 'templates/css/cards.html'
+                        templateUrl: 'templates/css-samples/cards.html'
                     }
                 }
             })
