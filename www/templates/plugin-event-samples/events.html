@@ -1,16 +1,16 @@
 <ion-view view-title="Plugins">
-    <ion-content class="padding">
+    <ion-content class="padding" on-swipe-up="showAlert('on-swipe')">
 
         <div class="card">
-            <div class="item item-divider">
+            <div class="item item-divider" on-drag-down="showAlert('on-drag')">
                 Events Fired
             </div>
             <div class="item item-text-wrap" ng-if="isLoaded">
-                <div class="row">
+                <div class="row" on-touch="showAlert('on-touch')">
                     Event load fired
                 </div>
             </div>
-            <div class="item item-text-wrap" ng-if="isBeforeEnter">
+            <div class="item item-text-wrap" ng-if="isBeforeEnter" on-tap="showAlert('on-tap')">
                 <div class="row">
                     Event beforeEnter fired
                 </div>

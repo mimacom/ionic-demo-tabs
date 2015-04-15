@@ -114,7 +114,7 @@ angular.module('ionicDemoTabs.controllers', [])
 
     })
 
-    .controller('EventCtrl', function ($scope, $cordovaDevice, $ionicPlatform) {
+    .controller('EventCtrl', function ($scope, $cordovaDevice, $ionicPlatform, $ionicPopup) {
         $ionicPlatform.ready(function () {
             try{
                 $scope.device = $cordovaDevice.getDevice();
@@ -151,7 +151,13 @@ angular.module('ionicDemoTabs.controllers', [])
             $scope.isAfterLeave = true;
         });
 
+        $scope.showAlert = function(eventType) {
+            $ionicPopup.alert({
+                title: 'Event Fired',
+                template: 'The event ' + eventType + ' has been fired'
+            });
 
+        };
 
     })
     .controller('ListCtrl', function ($scope, $timeout) {
